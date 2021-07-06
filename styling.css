@@ -1,0 +1,56 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+#app-container, .insult-wrapper, .translate-wrapper {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+#app-container {
+    width: 400px;
+    margin: 10px auto;
+}
+
+.insult-wrapper, .translate-wrapper {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgba(255,255,255,0.4);
+}
+
+.insult-wrapper button, .translate-wrapper button {
+    height: 25px;
+    background-color: rgba(255,255,255, 0.8);
+    border: 0;
+    cursor: pointer;
+}
+
+.insult-wrapper button {
+    margin-top: 10px;
+}
+
+.translate-wrapper button {
+    margin: 10px 0;
+}
+
+.insult-wrapper textarea, .translate-wrapper textarea {
+    padding: 5px;
+    border: 0;
+}
+
+.insult-wrapper textarea:focus, .translate-wrapper textarea:focus {
+    outline: 2px solid rgba(255,255,255, 0.8);
+}

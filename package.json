@@ -1,7 +1,7 @@
 {
-    "name": "my-electron-app",
-    "version": "1.0.0",
-    "description": "Hello World!",
+    "name": "pirate-app",
+    "version": "1.0.1",
+    "description": "Makes you more pirate'ish!",
     "main": "main.js",
     "author": "Stoyan",
     "license": "MIT",

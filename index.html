@@ -5,14 +5,21 @@
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-eval' https://pirate.monkeyness.com/api/; script-src 'self' https://unpkg.com/ 'unsafe-eval' https://pirate.monkeyness.com/api/">
     <meta http-equiv="X-Content-Security-Policy" content="default-src 'self' 'unsafe-eval' https://pirate.monkeyness.com/api/; script-src 'self' https://unpkg.com/ 'unsafe-eval' https://pirate.monkeyness.com/api/">
-    <title>Hello World!</title>
+    <title>Pirate App — Be more pirate'ish!</title>
     <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="styling.css" />
   </head>
   <body>
     <div id="app-container">
-      <span>{{ insult }}</span>
-      <button v-on:click="fetchInsult">Get Insult</button>
-
+      <div class="insult-wrapper">
+        <textarea v-model="insult" rows="10" readonly placeholder="Ye be needin' a good keel haulin' fer yer indecency, ye dreadful, knee-knockin' hornswaggler! ... Gangway!"></textarea>
+        <button v-on:click="fetchInsult">Get Insult</button>
+      </div>
+      <div class="translate-wrapper">
+        <textarea v-model="inputMessage" rows="5" placeholder="Write your pirate message here.."></textarea>
+        <button v-on:click="fetchPirateMessage">Translate to Pirate'ish</button>
+        <textarea v-model="pirateMessage" rows="5" placeholder="Write yer pirate message here.."></textarea>
+      </div>
     </div>
     <script src="./renderer.js"></script>
   </body>
